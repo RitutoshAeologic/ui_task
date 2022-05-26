@@ -15,7 +15,7 @@ class VerificationScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.bg2Color,
       body: SingleChildScrollView(
-        padding: EdgeInsets.only(top: 30.h,left: 25.w
+        padding: EdgeInsets.only(top: 30.h,left: 25.w,right: 25.w
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,7 +50,7 @@ class VerificationScreen extends StatelessWidget {
             SizedBox(height: 100.h,),
             Text("Verification Code",
               style: AppStyles.whiteBoldFont,textAlign: TextAlign.center,),
-            SizedBox(height: 20.h,),
+            SizedBox(height: 15.h,),
             Text("Please enter 4 digit OTP sent to your \n"
                 "mobile no. 91XXXXXXX23.", style:AppStyles.regularBigFont,),
             SizedBox(height: 20.h,),
@@ -85,9 +85,34 @@ class VerificationScreen extends StatelessWidget {
 
                 ),
                 child: Center(
-                  child: MaterialButtonBox(title: "Submit", onTap: () => Navigator.pushNamed(context,
-                      Routes.verificationScreen) )
-                  ,
+                  child:
+                  MaterialButton(
+                    color: AppColors.white,
+                    onPressed:  () => Navigator.pushNamed(context,
+                    Routes.noInternetScreen),
+                    padding: EdgeInsets.only(left: 60.w,right: 10.w),
+                    height: ScreenUtil().setHeight(50),
+                    minWidth: ScreenUtil().setWidth(200),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(40)),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children:  <Widget>[
+                        Text("Submit",
+                          style: const  TextStyle(
+                            fontFamily: "Segoe UI",
+                            color: AppColors.bg2Color,
+                            fontWeight: FontWeight.normal,
+                            fontSize: 20,
+                            //height: 1.5,
+                            wordSpacing: 1.5,
+                          ),),
+                        SizedBox(width: ScreenUtil().setWidth(40.w),),
+                        const Icon(Icons.arrow_forward_ios, color: AppColors.bg2Color,)
+                      ],
+                    ),
+                  ),
                 ),
               ),
             ),

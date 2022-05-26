@@ -44,14 +44,14 @@ class AppStyles {
     fontFamily: "Segoe UI",
     color: AppColors.white,
     fontWeight: FontWeight.bold,
-    fontSize: 18.0,
+    fontSize: 12.0,
     letterSpacing: 1.5,
   );
 
   static TextStyle spanText = const TextStyle(
     fontFamily: "Segoe UI",
     color: AppColors.white,
-    fontWeight: FontWeight.normal,
+    fontWeight: FontWeight.w200,
     fontSize: 12.0,
    // letterSpacing: 1.5,
   );

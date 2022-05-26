@@ -36,7 +36,7 @@ class MaterialButtonBox extends StatelessWidget {
                 //height: 1.5,
                 wordSpacing: 1.5,
               ),),
-            SizedBox(width: ScreenUtil().setWidth(45.w),),
+            SizedBox(width: ScreenUtil().setWidth(42.w),),
             const Icon(Icons.arrow_forward_ios, color: AppColors.lightTextColor,)
           ],
         ),
